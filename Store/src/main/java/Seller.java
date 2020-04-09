@@ -35,5 +35,10 @@ public class Seller extends EmployeeInfo {
     public void Sell(String name, CashRegister CR, Stock stock, int quantity) {
         CR.FinalizeSell(name, stock, quantity);
     }
-
+    
+    public void AddToSell(String name, CashRegister CR, Stock stock, int quantity)
+    {
+        CR.receipts.add(new Receipt(name,CR.receipts.get(0).GetPrice(name, stock),quantity));
+    }
+    
 }

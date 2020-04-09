@@ -23,7 +23,7 @@ public class Administrator extends EmployeeInfo {
     public void RemoveProductsFromStock(String name, Stock stock) {
         for (int i = 0; i < stock.stockitems.size(); i++) {
             if (stock.stockitems.get(i).GetName().equals(name)) {
-                stock.stockitems.remove(i);
+                stock.Remove(name);
             }
         }
     }

@@ -9,7 +9,11 @@ public class Receipt {
     public Receipt() {
         recitems = new ArrayList<ReceiptItem>();
     }
-
+    
+    public Receipt(String name,float ppUnit,int quant)
+    {
+        recitems.add(new ReceiptItem(name,ppUnit,quant));
+    }
     public float GetTotalPerProduct(int i) {
         return (recitems.get(i).GetQuantity() * recitems.get(i).GetppUnit());
     }
@@ -35,4 +39,5 @@ public class Receipt {
         }
         return n;
     }
+
 }

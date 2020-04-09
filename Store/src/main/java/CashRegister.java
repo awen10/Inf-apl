@@ -13,8 +13,9 @@ public class CashRegister {
         receipts = new ArrayList<Receipt>();
     }
 
-    public CashRegister(int crNo) {
+    public CashRegister(int crNo,String name) {
         this.currentRecpNo = crNo;
+        this.storename=name;
     }
 
     public void StartNewSell() {
@@ -56,5 +57,10 @@ public class CashRegister {
         }
         return sum;
     }
-
+    
+    public int GetCrNo()
+    {
+        return this.currentRecpNo;
+    }
+    
 }

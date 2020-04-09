@@ -4,14 +4,20 @@ import java.util.*;
 
 public class Stock {
 
-    List<StockItem> stockitems;
+    public List<StockItem> stockitems;
 
     public Stock() {
         stockitems = new ArrayList<StockItem>();
     }
 
     public void Add(String name, String description, float price, int quantity) {
-        stockitems.add(new StockItem(name, description, price, quantity));
+        for (int i = 0; i < stockitems.size(); i++) {
+            if (stockitems.get(i).GetName().equals(name)) {
+                System.out.println("Error");
+            } else {
+                stockitems.add(new StockItem(name, description, price, quantity));
+            }
+        }
     }
 
     public void Remove(String name) {

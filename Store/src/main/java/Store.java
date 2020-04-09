@@ -18,7 +18,8 @@ public class Store {
     }
 
     public void AddNewCashRegister(int crNo) {
-        CR.add(new CashRegister(crNo));
+        CR.add(new CashRegister(crNo,this.name));
+       
     }
 
     public void AddNewSeller(String name, String phoneNo, String address) {
@@ -27,5 +28,10 @@ public class Store {
 
     public void AddNewAdmin(String name, String phoneNo, String address) {
         admin.add(new Administrator(name, phoneNo, address));
+    }
+    
+    public void RemoveCashRegister()
+    {
+        CR.remove(CR.size());
     }
 }
