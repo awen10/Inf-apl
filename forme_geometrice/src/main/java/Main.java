@@ -4,8 +4,7 @@ import java.util.Scanner;
 public class Main {
 
     public static void main(String[] args) {
-       // Meniu meniu=new Meniu();
-       // meniu.meniu();
+       
         Plansa plansa = new Plansa();
         plansa.Adaugare(0,0 , 0, 0, "Cerc");
         Scanner f = new Scanner(System.in);

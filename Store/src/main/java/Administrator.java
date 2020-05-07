@@ -7,8 +7,8 @@ public class Administrator extends EmployeeInfo {
         this.address = address;
     }
 
-    public void AddProductsToStock(String name, String description, float price, int quantity, Stock stock) {
-        stock.stockitems.add(new StockItem(name, description, price, quantity));
+    public void AddProductsToStock(String name, float price, int quantity, Stock stock) {
+        stock.stockitems.add(new StockItem(name, price, quantity));
     }
 
     public int CheckProductStock(String name, Stock stock) {

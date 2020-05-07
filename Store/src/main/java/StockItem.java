@@ -3,9 +3,8 @@ public class StockItem extends Product {
 
     private int quantity;
 
-    public StockItem(String name, String description, float price, int quantity) {
+    public StockItem(String name, float price, int quantity) {
         SetName(name);
-        SetDescription(description);
         SetPrice(price);
         this.quantity = quantity;
     }

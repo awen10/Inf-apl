@@ -10,12 +10,12 @@ public class Stock {
         stockitems = new ArrayList<StockItem>();
     }
 
-    public void Add(String name, String description, float price, int quantity) {
+    public void Add(String name,float price, int quantity) {
         for (int i = 0; i < stockitems.size(); i++) {
             if (stockitems.get(i).GetName().equals(name)) {
                 System.out.println("Error");
             } else {
-                stockitems.add(new StockItem(name, description, price, quantity));
+                stockitems.add(new StockItem(name, price, quantity));
             }
         }
     }

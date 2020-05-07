@@ -14,13 +14,11 @@ public class Main {
         store.AddNewAdmin("Admin", "0786541234", "CaleaBucuresti");
         store.AddNewCashRegister(0);
         store.AddNewSeller("Seller", "0771654039", "PetreIspirescu");
-
-        
         int i = -1;
         float total;
-        System.out.println("What do you want?");
+        
         Scanner f = new Scanner(System.in);
-        System.out.println("What quantity?");
+        
         int j = -1;
         int k = -1;
         String name;
@@ -39,7 +37,7 @@ public class Main {
                     break;
                 case 1:
                     System.out.println("Use as Administrator");
-                    while (j != 0){
+                    while (j != 0) {
                         System.out.println("0.Back");
                         System.out.println("1.Stock");
                         System.out.println("2.Cash register");
@@ -50,7 +48,7 @@ public class Main {
                                 break;
                             case 1:
                                 System.out.println("Stock");
-                                k=-1;
+                                k = -1;
                                 while (k != 0) {
                                     System.out.println("0.Back");
                                     System.out.println("1.Add product");
@@ -63,11 +61,11 @@ public class Main {
                                             break;
                                         case 1:
                                             System.out.println("Add product");
-                                            name = n.nextLine();
-                                            description = n.nextLine();
+                                            name = f.nextLine();
+                                            
                                             price = n.nextFloat();
                                             quant = n.nextInt();
-                                            store.admin.get(0).AddProductsToStock(name, description, price, quant, stock);
+                                            store.admin.get(0).AddProductsToStock(name, price, quant, stock);
                                             break;
                                         case 2:
                                             System.out.println("Remove product");
@@ -85,7 +83,7 @@ public class Main {
                                     }
                                 }
                             case 2:
-                                k=-1;
+                                k = -1;
                                 System.out.println("Cash Register");
                                 while (k != 0) {
                                     System.out.println("0.Back");
@@ -119,7 +117,7 @@ public class Main {
                         }
                     }
                 case 2:
-                    k=-1;
+                    k = -1;
                     while (k != 0) {
                         System.out.println("0.Back");
                         System.out.println("1.Start sell");
@@ -131,7 +129,7 @@ public class Main {
                                 System.out.println("Back");
                                 break;
                             case 1:
-                                k=-1;
+                                k = -1;
                                 System.out.println("Start sell");
                                 while (k != 0) {
                                     System.out.println("Back");
