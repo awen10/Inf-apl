@@ -9,6 +9,10 @@ import com.ace.pluginsapplication.interfaces.IShape;
 import java.util.ArrayList;
 import java.util.List;
 
+/**
+ *
+ * @author Daniel
+ */
 public class Board {
 
     List<IShape> figures;

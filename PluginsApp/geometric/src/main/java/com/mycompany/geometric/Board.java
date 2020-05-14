@@ -7,10 +7,7 @@ package com.mycompany.geometric;
 
 import java.util.*;
 
-/**
- *
- * @author Daniel
- */
+
 public class Board {
 
     List<Shape> geometricForms;

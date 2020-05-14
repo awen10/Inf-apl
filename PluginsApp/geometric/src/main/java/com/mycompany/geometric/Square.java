@@ -7,10 +7,7 @@ package com.mycompany.geometric;
 
 import java.util.*;
 
-/**
- *
- * @author Daniel
- */
+
 public class Square implements Shape {
 
     List<Point> points;

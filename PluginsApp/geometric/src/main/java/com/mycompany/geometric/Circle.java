@@ -5,10 +5,7 @@
  */
 package com.mycompany.geometric;
 
-/**
- *
- * @author Daniel
- */
+
 public class Circle implements Shape {
 
     Point O;

@@ -5,10 +5,7 @@
  */
 package com.mycompany.geometric;
 
-/**
- *
- * @author Daniel
- */
+
 public class Point {
 
     float x, y;
