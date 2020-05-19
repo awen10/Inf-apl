@@ -12,5 +12,5 @@ package com.ace.pluginsapplication.interfaces;
 public interface IPluginsAppPlugin {
      String getUniqueNameText();
      String getDisplayText();
-     IShape getShape();    
+     IShape getShape(IObserver observer);    
 }

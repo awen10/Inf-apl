@@ -37,7 +37,7 @@ public class ApplicationMenu {
         for (int i = 0; i < plugins.size(); i++) {
             var currentPlugin = plugins.get(i);
             MenuItem currentItem = new MenuItem(plugins.get(i).getDisplayText(), shortCut++, (parameters) -> {
-                IShape shape = currentPlugin.getShape();
+                IShape shape = currentPlugin.getShape(board);
                 shape.read();
                 board.AddShape(shape);
             });
@@ -58,7 +58,7 @@ public class ApplicationMenu {
                     }
                 }));
 
-        //add "Modify" main menu option
+        
         shortCut = 1;
         for (int i = 0; i < plugins.size(); i++) {
             var currentPlugin = plugins.get(i);
@@ -72,7 +72,7 @@ public class ApplicationMenu {
                             System.out.println("Forma geometrica inexistenta!");
                             return;
                         }
-                        IShape shape = currentPlugin.getShape();
+                        IShape shape = currentPlugin.getShape(board);
                         shape.read();
                         board.AddShape(shape);
                     });
@@ -80,7 +80,7 @@ public class ApplicationMenu {
         }
         mainMenuItems.add(new Menu("Modificare", 3, modifyMenuItems));
 
-        //add "View" main menu option
+       
         mainMenuItems.add(new MenuItem("Vizualizare plansa",
                 4,
                 (parameters) -> {

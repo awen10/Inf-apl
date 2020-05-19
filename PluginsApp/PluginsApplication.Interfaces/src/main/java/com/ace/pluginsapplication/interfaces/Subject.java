@@ -7,15 +7,21 @@ package com.ace.pluginsapplication.interfaces;
 
 import java.awt.Point;
 import java.util.List;
+
 /**
  *
- * @author catalin
+ * @author adria
  */
-public interface IShape {
-
-    void draw();
-
-    void read();
+public class Subject {
+    IObserver observer;
     
-    List<Point.Float> RectangleInscription();
+    public void RegisterObserver(IObserver observer)
+    {
+        this.observer=observer;
+    }
+    
+    public void NotifyObserver(List<Point.Float> list)
+    {
+        observer.Update(list);
+    }
 }

@@ -5,6 +5,7 @@
  */
 package com.ace.circleplugin;
 
+import com.ace.pluginsapplication.interfaces.IObserver;
 import com.ace.pluginsapplication.interfaces.IPluginsAppPlugin;
 import com.ace.pluginsapplication.interfaces.IShape;
 
@@ -25,8 +26,8 @@ public class CirclePlugin implements IPluginsAppPlugin {
     }
 
     @Override
-    public IShape getShape() {
-        return new Circle();
+    public IShape getShape(IObserver observer) {
+        return new Circle( observer);
     }
 
 }

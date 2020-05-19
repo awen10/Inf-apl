@@ -5,6 +5,7 @@
  */
 package com.ace.square;
 
+import com.ace.pluginsapplication.interfaces.IObserver;
 import com.ace.pluginsapplication.interfaces.IPluginsAppPlugin;
 import com.ace.pluginsapplication.interfaces.IShape;
 
@@ -25,8 +26,8 @@ public class SquarePlugin implements IPluginsAppPlugin {
     }
 
     @Override
-    public IShape getShape() {
-        return new Square();
+    public IShape getShape(IObserver observer) {
+        return new Square(observer);
     }
 
 }
